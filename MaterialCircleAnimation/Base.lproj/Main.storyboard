@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="14C2043" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Urp-Ut-hQZ">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="3wc-SZ-iWN">
+            <objects>
+                <navigationController id="Urp-Ut-hQZ" sceneMemberID="viewController">
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="fqF-Wq-VHW">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="ccR-rZ-aqm">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </toolbar>
+                    <connections>
+                        <segue destination="vXZ-lx-hvc" kind="relationship" relationship="rootViewController" id="QoC-fX-dtn"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3JN-ll-UU7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="186" y="-310"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController storyboardIdentifier="ViewController" id="vXZ-lx-hvc" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
+                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" misplaced="YES" image="ipad.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="x2P-f8-NDF">
+                                <rect key="frame" x="20" y="191" width="280" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="280" id="5cb-mL-2GL"/>
+                                    <constraint firstAttribute="height" constant="200" id="ulf-UE-skh"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kel-jc-Rua">
+                                <rect key="frame" x="256" y="44" width="44" height="44"/>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="6sJ-nT-FzW"/>
+                                    <constraint firstAttribute="width" constant="44" id="XDV-8s-lft"/>
+                                </constraints>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="22"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="showCircle:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="EMZ-Xi-VR6"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.11013150350000001" green="0.82194942240000002" blue="0.03042525389" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="Kel-jc-Rua" secondAttribute="trailing" constant="4" id="4jz-QF-8RX"/>
+                            <constraint firstAttribute="centerY" secondItem="x2P-f8-NDF" secondAttribute="centerY" id="RHB-xS-mb2"/>
+                            <constraint firstItem="Kel-jc-Rua" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="20" id="WPv-Eq-ZiN"/>
+                            <constraint firstAttribute="centerX" secondItem="x2P-f8-NDF" secondAttribute="centerX" id="ZTK-kO-GrQ"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="be0-ho-EYT"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="button" destination="Kel-jc-Rua" id="jLF-9F-1xk"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="619" y="-310"/>
+        </scene>
+        <!--View Controller2-->
+        <scene sceneID="y9f-rw-neT">
+            <objects>
+                <viewController storyboardIdentifier="ViewController2" id="trS-L0-LYD" customClass="ViewController2" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="aBq-5N-Gtc"/>
+                        <viewControllerLayoutGuide type="bottom" id="FJ2-OT-mix"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Xyd-50-oDI">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" misplaced="YES" image="iphone.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="VRp-9P-Pyx">
+                                <rect key="frame" x="20" y="172" width="280" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="Zta-iK-brx"/>
+                                    <constraint firstAttribute="width" constant="280" id="ppu-vO-Zy0"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hVK-s8-qQz">
+                                <rect key="frame" x="265" y="40" width="44" height="44"/>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="5v2-Rr-RnD"/>
+                                    <constraint firstAttribute="width" constant="44" id="W2K-nY-x2L"/>
+                                </constraints>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="22"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="clickBack:" destination="trS-L0-LYD" eventType="touchUpInside" id="aEB-f8-gd2"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="VRp-9P-Pyx" secondAttribute="centerX" id="6Nc-kl-kCC"/>
+                            <constraint firstAttribute="centerY" secondItem="VRp-9P-Pyx" secondAttribute="centerY" id="JZr-Oo-xbu"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="hVK-s8-qQz" secondAttribute="trailing" constant="20" id="cVe-4v-hfG"/>
+                            <constraint firstItem="hVK-s8-qQz" firstAttribute="top" secondItem="aBq-5N-Gtc" secondAttribute="bottom" constant="20" id="dKS-gl-PQM"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="lcS-Fj-IZE"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="button" destination="hVK-s8-qQz" id="lao-cG-EFX"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="g1P-9k-9Rf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1029" y="-310"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="ipad.jpg" width="984" height="562"/>
+        <image name="iphone.jpg" width="1200" height="1200"/>
+    </resources>
+</document>

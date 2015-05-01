@@ -19,12 +19,10 @@
     [super viewDidLoad];
 
     self.navigationController.delegate = self;
-    // 设置转场动画
     self.circleAnimator = [MaterialCircleAnimator new];
 }
 
 #pragma mark - UINavigationControllerDelegate iOS7新增的2个方法
-// 动画特效
 - (id) navigationController:(UINavigationController *)navigationController animationControllerForOperation:(UINavigationControllerOperation)operation fromViewController:(UIViewController *)fromVC toViewController:(UIViewController *)toVC
 {
     if (operation == UINavigationControllerOperationPush) {
@@ -38,7 +36,6 @@
 
     
     ViewController2 *secondViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"ViewController2"];
-//    secondViewController.navigationController.delegate = self;
     
     [self.navigationController pushViewController:secondViewController animated:YES];
     

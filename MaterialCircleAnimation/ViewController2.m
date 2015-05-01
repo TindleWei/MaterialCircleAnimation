@@ -6,8 +6,8 @@
 //  Copyright (c) 2015年 tindle. All rights reserved.
 //
 
-#import "ViewController2.h"
 #import "ViewController.h"
+#import "ViewController2.h"
 
 @implementation ViewController2
 

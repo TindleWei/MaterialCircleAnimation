@@ -36,6 +36,7 @@
 
     
     ViewController2 *secondViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"ViewController2"];
+    self.transitioningDelegate = self.circleAnimator;
     
     [self.navigationController pushViewController:secondViewController animated:YES];
     

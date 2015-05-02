@@ -9,9 +9,16 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 
+enum AnimationType
+{
+    AnimationTypePresent,
+    AnimationTypeDismiss
+};
+
 @interface MaterialCircleAnimator : NSObject <UIViewControllerAnimatedTransitioning>
 
 @property (nonatomic, weak) IBOutlet id<UIViewControllerContextTransitioning> transitionContext;
 
+@property (nonatomic) enum      AnimationType type;
 
 @end

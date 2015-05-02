@@ -15,8 +15,9 @@
 
 - (NSTimeInterval)transitionDuration:(id <UIViewControllerContextTransitioning>)transitionContext{
     
-    return 1.5;
+    return 2.5;
 }
+
 
 - (void)animateTransition:(id <UIViewControllerContextTransitioning>)transitionContext{
     self.transitionContext = transitionContext;
@@ -24,16 +25,15 @@
     ViewController *fromViewController = (ViewController *)[transitionContext viewControllerForKey:(UITransitionContextFromViewControllerKey)];
     UIViewController *toViewController = (UIViewController *)[transitionContext viewControllerForKey:(UITransitionContextToViewControllerKey)];
     UIButton* button = fromViewController.button;
-    
+
     [containerView addSubview:toViewController.view];
     
     UIBezierPath* circleMaskPathInitial = [UIBezierPath bezierPathWithOvalInRect:
-     button.frame];
+                                           button.frame];
     CGPoint extremePoint = CGPointMake([button center].x, [button center].y -  CGRectGetHeight(toViewController.view.bounds));
-    CGFloat radius = sqrt(extremePoint.x * extremePoint.x) + (extremePoint.y * extremePoint.y);
+    CGFloat radius = sqrt((extremePoint.x * extremePoint.x) + (extremePoint.y * extremePoint.y));
     UIBezierPath* circleMaskPathFinal = [UIBezierPath bezierPathWithOvalInRect:
-                                        CGRectInset(button.frame, -radius, -radius)];
-    
+                                         CGRectInset(button.frame, -radius, -radius)];
     CAShapeLayer* maskLayer = [CAShapeLayer new];
     maskLayer.path = circleMaskPathFinal.CGPath;
     toViewController.view.layer.mask = maskLayer;
@@ -43,6 +43,7 @@
     maskLayerAnimation.toValue = (__bridge id)([circleMaskPathFinal CGPath]);
     maskLayerAnimation.duration = [self transitionDuration: transitionContext];
     maskLayerAnimation.delegate = self;
+
     [maskLayer addAnimation:maskLayerAnimation forKey:@"path"];
     
 }

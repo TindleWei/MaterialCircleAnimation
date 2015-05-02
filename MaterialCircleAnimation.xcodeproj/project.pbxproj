@@ -432,6 +432,7 @@
 				1FD4D5581AF0839800671107 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		1FD4D5591AF0839800671107 /* Build configuration list for PBXNativeTarget "MaterialCircleAnimationTests" */ = {
 			isa = XCConfigurationList;
@@ -440,6 +441,7 @@
 				1FD4D55B1AF0839800671107 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -10,8 +10,8 @@
 
 @interface ViewController2 : UIViewController
 @property (strong, nonatomic) IBOutlet UIButton *button;
-- (IBAction)clickBack:(id)sender;
 
+@property (nonatomic, strong) MaterialCircleAnimator *circleAnimator;
 
 
 @end

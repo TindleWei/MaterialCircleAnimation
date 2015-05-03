@@ -59,14 +59,11 @@
                                         <integer key="value" value="22"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
-                                <connections>
-                                    <action selector="showCircle:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="EMZ-Xi-VR6"/>
-                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.11013150350000001" green="0.82194942240000002" blue="0.03042525389" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstAttribute="trailingMargin" secondItem="Kel-jc-Rua" secondAttribute="trailing" constant="4" id="4jz-QF-8RX"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Kel-jc-Rua" secondAttribute="trailing" constant="20" id="4jz-QF-8RX"/>
                             <constraint firstAttribute="centerY" secondItem="x2P-f8-NDF" secondAttribute="centerY" id="RHB-xS-mb2"/>
                             <constraint firstItem="Kel-jc-Rua" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="20" id="WPv-Eq-ZiN"/>
                             <constraint firstAttribute="centerX" secondItem="x2P-f8-NDF" secondAttribute="centerX" id="ZTK-kO-GrQ"/>
@@ -102,7 +99,7 @@
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hVK-s8-qQz">
-                                <rect key="frame" x="265" y="40" width="44" height="44"/>
+                                <rect key="frame" x="256" y="44" width="44" height="44"/>
                                 <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="5v2-Rr-RnD"/>
@@ -116,9 +113,6 @@
                                         <integer key="value" value="22"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
-                                <connections>
-                                    <action selector="clickBack:" destination="trS-L0-LYD" eventType="touchUpInside" id="aEB-f8-gd2"/>
-                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>

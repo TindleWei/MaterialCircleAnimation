@@ -14,7 +14,6 @@
 
 @property (nonatomic, strong) MaterialCircleAnimator *circleAnimator;
 
-- (IBAction)showCircle:(id)sender;
 
 @end
 

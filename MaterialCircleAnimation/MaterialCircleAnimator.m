@@ -12,28 +12,34 @@
 
 @implementation MaterialCircleAnimator
 
+-(void) setCenterPoint:(CGPoint)originalPoint{
+    _centerPoint = originalPoint;
+    NSLog(@"CGPoint center: %f, %f", _centerPoint.x, _centerPoint.y);
+}
+
 
 - (NSTimeInterval)transitionDuration:(id <UIViewControllerContextTransitioning>)transitionContext{
     
-    return 2.5;
+    return 0.7;
 }
 
 
 - (void)animateTransition:(id <UIViewControllerContextTransitioning>)transitionContext{
     self.transitionContext = transitionContext;
     UIView* containerView = [transitionContext containerView];
-    ViewController *fromViewController = (ViewController *)[transitionContext viewControllerForKey:(UITransitionContextFromViewControllerKey)];
+    UIViewController *fromViewController = (UIViewController *)[transitionContext viewControllerForKey:(UITransitionContextFromViewControllerKey)];
     UIViewController *toViewController = (UIViewController *)[transitionContext viewControllerForKey:(UITransitionContextToViewControllerKey)];
-    UIButton* button = fromViewController.button;
 
     [containerView addSubview:toViewController.view];
     
+    CGRect centerRect = CGRectMake(_centerPoint.x-5, _centerPoint.y-5, 10, 10);
+    
     UIBezierPath* circleMaskPathInitial = [UIBezierPath bezierPathWithOvalInRect:
-                                           button.frame];
-    CGPoint extremePoint = CGPointMake([button center].x, [button center].y -  CGRectGetHeight(toViewController.view.bounds));
+                                           centerRect];
+    CGPoint extremePoint = CGPointMake(_centerPoint.x, _centerPoint.y -  CGRectGetHeight(toViewController.view.bounds));
     CGFloat radius = sqrt((extremePoint.x * extremePoint.x) + (extremePoint.y * extremePoint.y));
     UIBezierPath* circleMaskPathFinal = [UIBezierPath bezierPathWithOvalInRect:
-                                         CGRectInset(button.frame, -radius, -radius)];
+                                         CGRectInset(centerRect, -radius, -radius)];
     CAShapeLayer* maskLayer = [CAShapeLayer new];
     maskLayer.path = circleMaskPathFinal.CGPath;
     toViewController.view.layer.mask = maskLayer;
@@ -43,7 +49,7 @@
     maskLayerAnimation.toValue = (__bridge id)([circleMaskPathFinal CGPath]);
     maskLayerAnimation.duration = [self transitionDuration: transitionContext];
     maskLayerAnimation.delegate = self;
-
+    
     [maskLayer addAnimation:maskLayerAnimation forKey:@"path"];
     
 }

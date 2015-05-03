@@ -15,11 +15,15 @@
 
 @implementation ViewController
 
-- (void)viewDidLoad {
+- (void)viewDidLoad
+{
     [super viewDidLoad];
 
     self.navigationController.delegate = self;
     self.circleAnimator = [MaterialCircleAnimator new];
+    
+    [self.button addTarget:self action:@selector(buttonClick:event:) forControlEvents:UIControlEventTouchUpInside];
+    
 }
 
 #pragma mark - UINavigationControllerDelegate iOS7新增的2个方法
@@ -27,17 +31,23 @@
 {
     if (operation == UINavigationControllerOperationPush) {
         return self.circleAnimator;
-    }else{
+    }else if (operation == UINavigationControllerOperationPop){
+        return self.circleAnimator;
+    }else{ // UINavigationControllerOperationNone
         return nil;
     }
 }
 
-- (IBAction)showCircle:(id)sender {
-
+- (IBAction) buttonClick:(id)sender event:(UIEvent *)event
+{
+    CGPoint position = [[[event allTouches] anyObject] locationInView:sender];
     
     ViewController2 *secondViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"ViewController2"];
-    self.transitioningDelegate = self.circleAnimator;
     
+    //convert to absolute position
+    position = [self.button convertPoint:position toView:self.view];
+    
+    [self.circleAnimator setCenterPoint:position];
     [self.navigationController pushViewController:secondViewController animated:YES];
     
 }

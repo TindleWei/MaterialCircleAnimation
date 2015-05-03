@@ -21,4 +21,8 @@ enum AnimationType
 
 @property (nonatomic) enum      AnimationType type;
 
+@property (nonatomic) CGPoint centerPoint;
+
+-(void)setCenterPoint:(CGPoint)originalPoint;
+
 @end

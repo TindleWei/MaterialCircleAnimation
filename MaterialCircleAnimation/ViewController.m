@@ -42,14 +42,21 @@
 {
     CGPoint position = [[[event allTouches] anyObject] locationInView:sender];
     
-    ViewController2 *secondViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"ViewController2"];
-    
     //convert to absolute position
     position = [self.button convertPoint:position toView:self.view];
     
     [self.circleAnimator setCenterPoint:position];
-    [self.navigationController pushViewController:secondViewController animated:YES];
+    [self.navigationController pushViewController:[self secondViewController] animated:YES];
     
+}
+
+- (ViewController2 *)secondViewController {
+    static ViewController2 *secondViewController;
+    if (secondViewController != nil) {
+        return secondViewController;
+    }
+    secondViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"ViewController2"];
+    return secondViewController;
 }
 
 @end

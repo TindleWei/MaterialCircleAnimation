@@ -8,11 +8,11 @@ I will add the material animation of jumping between different kind views.
 
 1. Add navigation controller example  
    **finish**
-2. Add mode view controller exmple    
+2. Add mode view controller example    
    **not done**
-3. Add tab bar controller  exmple   
+3. Add tab bar controller  example   
    **not done**
-4. Add child views exmple  
+4. Add child views example  
    **find the demo**
 
 ### References

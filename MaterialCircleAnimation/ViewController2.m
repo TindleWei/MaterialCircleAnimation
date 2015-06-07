@@ -35,6 +35,8 @@
     CGPoint position = [[[event allTouches] anyObject] locationInView:sender];
     //convert to absolute position
     position = [self.button convertPoint:position toView:self.view];
+    
+    NSLog(@"position 2:  %f, %f",position.x, position.y);
     [self.circleAnimator setCenterPoint:position];
     
     [self.navigationController popViewControllerAnimated:YES];

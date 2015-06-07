@@ -14,7 +14,7 @@
 
 -(void) setCenterPoint:(CGPoint)originalPoint{
     _centerPoint = originalPoint;
-    NSLog(@"CGPoint center: %f, %f", _centerPoint.x, _centerPoint.y);
+//    NSLog(@"CGPoint center: %f, %f", _centerPoint.x, _centerPoint.y);
 }
 
 
@@ -31,6 +31,9 @@
     UIViewController *toViewController = (UIViewController *)[transitionContext viewControllerForKey:(UITransitionContextToViewControllerKey)];
 
     [containerView addSubview:toViewController.view];
+    
+    
+    NSLog(@"animateTransition:  %f, %f",_centerPoint.x, _centerPoint.y);
     
     CGRect centerRect = CGRectMake(_centerPoint.x-5, _centerPoint.y-5, 10, 10);
     

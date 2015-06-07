@@ -18,12 +18,12 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </toolbar>
                     <connections>
-                        <segue destination="vXZ-lx-hvc" kind="relationship" relationship="rootViewController" id="QoC-fX-dtn"/>
+                        <segue destination="vXZ-lx-hvc" kind="relationship" relationship="rootViewController" id="rAA-u8-BE5"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3JN-ll-UU7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="186" y="-310"/>
+            <point key="canvasLocation" x="160" y="-310"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="ufC-wZ-h7g">
@@ -88,7 +88,7 @@
                         <viewControllerLayoutGuide type="bottom" id="FJ2-OT-mix"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Xyd-50-oDI">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" misplaced="YES" image="iphone.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="VRp-9P-Pyx">
@@ -124,6 +124,7 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="lcS-Fj-IZE"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
                         <outlet property="button" destination="hVK-s8-qQz" id="lao-cG-EFX"/>
